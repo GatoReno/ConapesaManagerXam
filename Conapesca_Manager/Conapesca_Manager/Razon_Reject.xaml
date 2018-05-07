@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Conapesca_Manager.Razon_Reject">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="10,10,10,10">
+            <Label Text="Detalle la razón de su rechazo"
+                    Margin="0,20,0,0"
+                HorizontalOptions="CenterAndExpand" />
+            <Label IsVisible="False" x:Name="lbl_ID"/>
+            <Label x:Name="res_Label"
+                   Text="..."/>
+
+            <Editor
+                Margin="0,20,0,0"
+                x:Name="Editx"
+                />
+            <Button
+                Margin="0,10,0,0"
+                x:Name="Sendx"
+                Text="Enivar"
+                Clicked="Send_Rejection"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

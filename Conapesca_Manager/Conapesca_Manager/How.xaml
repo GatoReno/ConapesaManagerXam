@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Conapesca_Manager.How">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10,10,10,10">
+                <Label Text="Bienvenido a Conapesca"
+                        HorizontalOptions="CenterAndExpand"
+                          FontSize="Medium"
+
+                           />
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Instrucciones de uso:"
+                        HorizontalOptions="CenterAndExpand"
+                     FontSize="Medium"
+                           />
+
+                <Editor
+                    FontSize="Small"
+                    Text="Conapesca te provee esta herramienta para que puedas trabajar más cómodo"
+                    HorizontalOptions="CenterAndExpand"
+                    />
+               
+
+               
+                <Label
+                    Margin="0,20,0,0"
+                        FontSize="Medium"
+                        Text="Consejos de uso"
+                        HorizontalOptions="CenterAndExpand"
+                    />
+
+
+                <Editor
+                    FontSize="Small"
+                    Text="Esta aplicación te permitirá firmar peticiones con un firma digital, recuerda siempre leer con detalle las peticiones antes de firmarlas."
+                    HorizontalOptions="CenterAndExpand"
+                    />
+
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Instrucciones"
+                        HorizontalOptions="CenterAndExpand"
+                     FontSize="Medium"
+                           />
+                <Image Source="gear.png"
+                       BackgroundColor="CornflowerBlue"
+                       
+                       HorizontalOptions="CenterAndExpand"/>
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Fácil de usar"
+                        HorizontalOptions="CenterAndExpand"
+                     FontSize="Small"
+                           />
+                <Editor
+                    FontSize="Small"
+                    Text="Este icono te traerá a este apartado donde puedes leer las instrucciones"                    
+                    HorizontalOptions="CenterAndExpand"
+                    />
+
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Solicitudes"
+                        HorizontalOptions="CenterAndExpand"
+                     FontSize="Medium"
+                           />
+                <Image Source="list.png"
+                       BackgroundColor="CornflowerBlue"
+                      
+                       HorizontalOptions="CenterAndExpand"/>
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Revisa tus solicitudes"
+                        HorizontalOptions="CenterAndExpand"
+                     FontSize="Small"
+                           />
+                <Editor
+                    FontSize="Small"
+                    Text="En esta sección se encuentran las solicitudes pendientes por firmar, al elegir una de la lista, accesarás a los datos internos de esta solicitud y tras leerlos, podrás firmas aquellos documentos existentes en la solicitud."                    
+                    HorizontalOptions="CenterAndExpand"
+                    />
+
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Firmas"
+                        HorizontalOptions="CenterAndExpand"
+                     FontSize="Medium"
+                           />
+                <Image Source="sign.png"
+                       BackgroundColor="CornflowerBlue"
+                       
+                       HorizontalOptions="CenterAndExpand"/>
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Lee bien las solicitudes antes de firmarlas"
+                        HorizontalOptions="CenterAndExpand"
+                     FontSize="Small"
+                           />
+                <Editor
+                    FontSize="Small"
+                    Text="Esta aplicación está hecha para que puedas firmar las solicitudes y así cerciorarnos de que la firma es de una persona autorizada."
+                    HorizontalOptions="CenterAndExpand"
+                    />
+                
+
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Sesión"
+                        HorizontalOptions="CenterAndExpand"
+                     FontSize="Medium"
+                           />
+                <Image Source="user.png"
+                       BackgroundColor="CornflowerBlue"
+                       
+                       HorizontalOptions="CenterAndExpand"/>
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Cerrar sesión"
+                        HorizontalOptions="CenterAndExpand"
+                     FontSize="Small"
+                           />
+                <Editor
+                    FontSize="Small"
+                    Text="Para salir de la aplicación debes dirigirte al boton de usuario y dejar presionado donde viene tu nombre de usuario, se desplegará una pantalla , oprimos en borrar y listo. "
+                    HorizontalOptions="CenterAndExpand"
+                    />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

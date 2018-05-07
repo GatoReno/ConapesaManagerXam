@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Conapesca_Manager.Ordenes">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text=""
+                   Margin="0,10,0,0"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   x:Name="res_x"
+                   FontSize="Medium"/>
+
+            <Label Text=""
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   x:Name="res_y"
+                   IsVisible="False"
+                   FontSize="Medium"/>
+            <Image
+                x:Name="ListV"
+                Margin="0,10,0,0"
+                BackgroundColor="CornflowerBlue"
+                Source="list.png"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                IsVisible="False"
+            />
+
+            <ActivityIndicator 
+                x:Name="Cator"
+                IsRunning="False"
+                IsVisible="False"
+                               />
+            <ListView x:Name="ListOrdenes" 
+                      CachingStrategy="RetainElement"
+                       ItemTapped="OnSelected"
+                      
+                    Margin="10,10,10,10">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <StackLayout Spacing="4" >
+                                <StackLayout Orientation="Horizontal">
+
+                                   
+                                    <Label x:Name="firstName"
+                                    Text="{Binding idOrden}"
+                                    FontSize="10"
+                                    TextColor="Red"
+                                           IsVisible="False"/>
+                                    <Label Text="Orden: "  FontSize="10"/>
+                                    <Label x:Name="orden"
+                                    Text="{Binding orden}"
+                                    FontSize="10"
+                                    TextColor="Red"/>
+                                    <Label Text="N.Orden: "  FontSize="10"/>
+                                    <Label x:Name="noOrden"
+                                    Text="{Binding noOrden}"
+                                    FontSize="10"
+                                    TextColor="Red"/>
+                                    <Label Text="Fecha: "  FontSize="10"/>
+
+                                    <Label x:Name="fecha"
+                                    Text="{Binding fecha}"
+                                    FontSize="10"
+                                    TextColor="Red"/>
+
+
+
+                                </StackLayout>
+
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

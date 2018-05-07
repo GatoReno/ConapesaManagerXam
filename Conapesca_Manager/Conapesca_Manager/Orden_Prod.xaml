@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="Conapesca_Manager.Orden_Prod">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <ActivityIndicator x:Name="Cator"/>
+
+                <Label x:Name="Id_lbl"
+                       IsVisible="False"/>
+                <Label
+                     x:Name="lbl_res"/>
+
+            <ScrollView>
+                <Grid>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Margin="10" x:Name ="lbl_txt" Text="Datos de Orden" FontSize="25" />
+
+                        <ListView x:Name="ListOrden" Grid.Row="1" HorizontalOptions="FillAndExpand" HasUnevenRows="True" >
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid  Padding="10">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+
+                                           
+                                            <Label Text="Fecha" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="2" Grid.Column="0"  FontAttributes="Bold"/>
+                                            <Label Text="{Binding fecha}" HorizontalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="1" TextColor="Gray"  FontAttributes="Bold"/>
+
+
+                                            <Label Text="Orden" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="3" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding orden}" HorizontalOptions="CenterAndExpand" Grid.Row="3" TextColor="Blue"  Grid.Column="1"  FontAttributes="Bold"/>
+
+
+                                            <Label Text="Itinerario" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="4" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding intinerario}" HorizontalOptions="CenterAndExpand"  Grid.Row="4" Grid.Column="1" TextColor="Gray"  FontAttributes="Bold"/>
+
+                                            <Label Text="Medio " FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="5" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding medioTransporte}" HorizontalOptions="CenterAndExpand" Grid.Row="5" TextColor="Orange"  Grid.Column="1"  FontAttributes="Bold"/>
+
+                                            <Label Text="Aereo" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="6" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding aereo}" HorizontalOptions="CenterAndExpand" Grid.Row="6" TextColor="Gray"  Grid.Column="1"  FontAttributes="Bold"/>
+
+                                            <Label Text="Terrestre" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="7" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding terrestre}" HorizontalOptions="CenterAndExpand" Grid.Row="7" TextColor="Gray"   Grid.Column="1" FontAttributes="Bold"/>
+
+                                            <Label Text="Objetivo" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="8" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding objetivo}" HorizontalOptions="CenterAndExpand" Grid.Row="8" TextColor="Gray"  Grid.Column="1" FontAttributes="Bold"/>
+                                        
+                                            <Label Text="Recibió" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="9" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding recibi}" HorizontalOptions="CenterAndExpand" Grid.Row="9" TextColor="Gray"  Grid.Column="1" FontAttributes="Bold"/>
+
+
+                                        </Grid>
+                                    </ViewCell>
+
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+
+                      
+
+                    </Grid>
+                
+                </Grid>
+               
+            </ScrollView>
+            <controls:CheckBox x:Name="checkBoxGenero"
+                               CheckedText="Aprovada"
+                               
+                               UncheckedText="He leido esta solicitud y la apruebo"></controls:CheckBox>
+
+            <Button x:Name="Rech" 
+                    Clicked="Reject"
+                    Text="Rechazar"/>
+            <Button x:Name="Env" 
+                    IsEnabled="False" 
+                    Clicked="SendAccepted"
+                    Text="Enviar"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

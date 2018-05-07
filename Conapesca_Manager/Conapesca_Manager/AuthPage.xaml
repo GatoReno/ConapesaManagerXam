@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="Conapesca_Manager.AuthPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20,0,20,10">
+
+            <ActivityIndicator x:Name="waitActIndicator"/>
+            <Label Text="Bienvenido a Conapesca Manager!"                
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Ingresa tus datos para continuar "
+               HorizontalOptions="CenterAndExpand"
+                />
+            <Label 
+                TextColor="Red"
+                x:Name="res_Label"
+                Margin="0,0,10,0"
+                HorizontalOptions="CenterAndExpand"
+                />
+            <Label 
+                TextColor="Red"
+                x:Name="res_Label_api"
+                Margin="0,0,10,0"
+                HorizontalOptions="CenterAndExpand"
+                />
+            
+           
+            <forms:SignaturePadView
+                x:Name="Sign"
+                IsVisible="False"
+                StrokeWidth="3"
+                WidthRequest="280"
+                HeightRequest="260"
+                />
+            <Button Text="Salvar firma"
+                  Clicked="SaveSigature"
+                    x:Name="Savebtn"
+                    IsVisible="False"/>
+            
+            <Entry x:Name="userTxt"
+                    Placeholder = "User name"/>
+            
+            <Entry x:Name="passTxt"
+                    Placeholder = "Password" 
+                   IsPassword="True"/>
+           
+            <Button               
+               Clicked="Access_Login"
+                Text = "Continuar"
+                x:Name="btnAuth"/>
+            <Button               
+               Clicked="TryAgain"
+                IsVisible="False"
+                Text = "Intentar Nuevamente"
+                x:Name="TryAgainbtn"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

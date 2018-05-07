@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="Conapesca_Manager.PasAe_Pro">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <ActivityIndicator x:Name="Cator"/>
+
+            <Label x:Name="Id_lbl"
+                       IsVisible="False"/>
+            <Label
+                     x:Name="lbl_res"/>
+
+            <ScrollView>
+                <Grid>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Margin="10" x:Name ="lbl_txt" Text="Datos de Vuelo / transporte" FontSize="25" />
+
+                        <ListView x:Name="ListOrden" Grid.Row="1" HorizontalOptions="FillAndExpand" HasUnevenRows="True" >
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid  Padding="10">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+
+
+                                            <Label Text="Aerolinea" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="2" Grid.Column="0"  FontAttributes="Bold"/>
+                                            <Label Text="{Binding aerolinea}" HorizontalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="1" TextColor="Gray"  FontAttributes="Bold"/>
+
+                                            <Label Text="Vuelo" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="3" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding vuelo}" HorizontalOptions="CenterAndExpand"  Grid.Row="3" Grid.Column="1" TextColor="Gray"  FontAttributes="Bold"/>
+
+                                            <Label Text="Salida" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="4" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding salida}" HorizontalOptions="CenterAndExpand" Grid.Row="4" TextColor="Blue"  Grid.Column="1"  FontAttributes="Bold"/>
+
+                                            <Label Text="Fecha" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="5" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding sFecha}" HorizontalOptions="CenterAndExpand" Grid.Row="5" TextColor="Orange"  Grid.Column="1"  FontAttributes="Bold"/>
+
+                                            <Label Text="Hora" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="6" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding sHora}" HorizontalOptions="CenterAndExpand" Grid.Row="6" TextColor="Gray"  Grid.Column="1"  FontAttributes="Bold"/>
+
+                                            <Label Text="Retorno" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="7" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding regreso}" HorizontalOptions="CenterAndExpand" Grid.Row="7" TextColor="Gray"   Grid.Column="1" FontAttributes="Bold"/>
+
+                                            <Label Text="Fecha" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="8" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding rFecha}" HorizontalOptions="CenterAndExpand" Grid.Row="8" TextColor="Gray"  Grid.Column="1" FontAttributes="Bold"/>
+                                            
+                                            <Label Text="Hora" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="9" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding rHora}" HorizontalOptions="CenterAndExpand" Grid.Row="9" TextColor="Gray"  Grid.Column="1" FontAttributes="Bold"/>
+
+                                            <Label Text="Motivo" FontSize="Medium" HorizontalOptions="StartAndExpand" Grid.Row="10" Grid.Column="0" FontAttributes="Bold"/>
+                                            <Label Text="{Binding motivo}" HorizontalOptions="CenterAndExpand" Grid.Row="10" TextColor="Gray"  Grid.Column="1" FontAttributes="Bold"/>
+
+                                        </Grid>
+                                    </ViewCell>
+
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </Grid>
+
+                </Grid>
+
+            </ScrollView>
+            
+
+           
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Conapesca_Manager.Orden">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <Label Text="Welcome to Xamarin.Forms!"
+                   x:Name="lbl_res"
+                FontSize="Medium"
+                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="Id_lbl"
+                   IsVisible="False"/>
+            <ActivityIndicator 
+                x:Name="Cator"
+                IsRunning="False"
+                IsVisible="False"
+                               />
+
+            <Label x:Name="Doc_Pre"
+                   Margin="10,10,0,10"
+                   Text="Documentos de envio"/>
+            <Button
+              Text="ORDEN PROYECTO"
+                Clicked="Orden_Pro"
+                />
+            <Button
+                Text="PASAJE AEREO "
+                x:Name="PasajeAereo"
+                Clicked="PasAe_Pro"
+                />
+
+            <Label x:Name="Doc_Post"
+                   Margin="10,10,0,10"
+                   Text="Documentos de vuelta"/>
+            <Button
+              Text="INFORME DE LA ORDEN"
+                IsEnabled="False"/>
+            <Button
+              Text="RELACION DE GASTOS "
+                IsEnabled="False"/>
+            <Button
+              Text="ANEXO GASTOS NO DED "
+                  IsEnabled="False"/>
+          
+           
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

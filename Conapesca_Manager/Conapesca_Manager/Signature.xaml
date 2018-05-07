@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="Conapesca_Manager.Signature">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Solo falta tu firma!"
+                   x:Name="res1_lbdl"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text=""
+                   x:Name="res1_lbl"
+                   IsVisible="False"
+                   TextColor="Red"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <ActivityIndicator IsVisible="False"
+                               IsRunning="False"
+                               x:Name="Cator"/>
+            <Label Text=""
+                   x:Name="res_lbl"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <forms:SignaturePadView
+                x:Name="Sign"
+               
+                StrokeWidth="3"
+                WidthRequest="280"
+                HeightRequest="360"
+                />
+            <Button Text="Salvar firma"
+                    Clicked="SaveSigature"
+                    x:Name="Savebtn"/>
+            <Button Text="Borrar"
+                    x:Name="Borrarbtn"
+                    Clicked="DropSignature"
+                    Margin="0,0,0,10"/>
+            <Button Text="to image"
+                    Clicked="ToImage"/>
+            <Image  x:Name="Imgx"
+                        IsVisible="False"
+                        />
+            <ScrollView>
+                <Label  x:Name="bytex"/>
+                
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
